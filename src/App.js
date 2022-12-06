@@ -1,7 +1,33 @@
+import Topbar from "./components/Topbar/Topbar";
+import Footer from "./components/Footer/Footer";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+
 function App() {
   return (
-    <div className="App text-blue-300 text-3xl">
-      hello
+    <div className="App  pt-20 sm:pt-28 px-4 sm:px-10  font-inter overflow-hidden ">
+      <Router>
+        <Topbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          {/* <Route
+            path="/recipes/:recipename"
+            element={<Recipes data={Tryrecipes} />}
+          />
+          <Route
+            path="/homerecipes/:recipename"
+            element={<Homerecipes home={Homerecipedata} />}
+          />
+          <Route path="/blogs" element={<Blogs blog={Blog} />} />
+          <Route
+            path="/blogdetails/:blogtite"
+            element={<BlogDetails blog={Blog} />}
+          />
+          <Route path="/contactpage" element={<Contactpage />} />
+          <Route path="/aboutus" element={<Aboutus />} /> */}
+        </Routes>
+        <Footer />
+      </Router>
     </div>
   );
 }
