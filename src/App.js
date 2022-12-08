@@ -1,7 +1,14 @@
 import Topbar from "./components/Topbar/Topbar";
 import Footer from "./components/Footer/Footer";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+// import Recipes from "./pages/Recipes";
+import Homerecipes from "./pages/Homerecipes";
+// import Blogs from "./pages/Blogs";
+// import Aboutus from "./pages/Aboutus";
+// import Contactpage from "./pages/Contactpage";
+// import BlogDetails from "./pages/BlogDetails";
+import { Blog, Tryrecipes, Homerecipedata } from "./data";
 
 function App() {
   return (
@@ -13,12 +20,12 @@ function App() {
           {/* <Route
             path="/recipes/:recipename"
             element={<Recipes data={Tryrecipes} />}
-          />
+          /> */}
           <Route
             path="/homerecipes/:recipename"
             element={<Homerecipes home={Homerecipedata} />}
           />
-          <Route path="/blogs" element={<Blogs blog={Blog} />} />
+          {/* <Route path="/blogs" element={<Blogs blog={Blog} />} />
           <Route
             path="/blogdetails/:blogtite"
             element={<BlogDetails blog={Blog} />}
