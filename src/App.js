@@ -2,13 +2,13 @@ import Topbar from "./components/Topbar/Topbar";
 import Footer from "./components/Footer/Footer";
 import Home from "./pages/Home";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-// import Recipes from "./pages/Recipes";
+import Recipes from "./pages/Recipes";
 import Homerecipes from "./pages/Homerecipes";
 // import Blogs from "./pages/Blogs";
 // import Aboutus from "./pages/Aboutus";
 // import Contactpage from "./pages/Contactpage";
 // import BlogDetails from "./pages/BlogDetails";
-import { Blog, Tryrecipes, Homerecipedata } from "./data";
+import { Homerecipedata, Tryrecipes } from "./data";
 
 function App() {
   return (
@@ -17,10 +17,10 @@ function App() {
         <Topbar />
         <Routes>
           <Route path="/" element={<Home />} />
-          {/* <Route
+          <Route
             path="/recipes/:recipename"
             element={<Recipes data={Tryrecipes} />}
-          /> */}
+          />
           <Route
             path="/homerecipes/:recipename"
             element={<Homerecipes home={Homerecipedata} />}
