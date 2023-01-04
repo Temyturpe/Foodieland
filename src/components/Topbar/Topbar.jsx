@@ -17,7 +17,14 @@ const Topbar = () => {
   return (
     <div className="Topbar fixed z-10 left-0 top-0 w-full overflow-hidden  shadow-sm bg-white ">
       <div className="Topbar-box  px-4 sm:px-10 py-4 sm:py-8 flex justify-between items-center">
-        <div className="leftside font-lobster text-2xl">Foodieland.</div>
+        <div className="leftside font-lobster text-2xl">  <Link
+                  to="/"
+                  onClick={() => {
+                    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+                  }}
+                >
+                  Foodieland.
+                </Link></div>
         <div className="middle md:flex hidden">
           <div className="navbox">
             <ul className="navs font-inter flex justify-center items-center gap-8 text-lg">
