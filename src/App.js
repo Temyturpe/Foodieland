@@ -5,8 +5,8 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Recipes from "./pages/Recipes";
 import Homerecipes from "./pages/Homerecipes";
 import Blogs from "./pages/Blogs";
-// import Aboutus from "./pages/Aboutus";
-// import Contactpage from "./pages/Contactpage";
+import Aboutus from "./pages/Aboutus";
+import Contactpage from "./pages/Contactpage";
 import BlogDetails from "./pages/BlogDetails";
 import { Blog, Tryrecipes, Homerecipedata } from "./data";
 
@@ -30,9 +30,8 @@ function App() {
             path="/blogdetails/:blogtite"
             element={<BlogDetails blog={Blog} />}
           />
-          {/*
           <Route path="/contactpage" element={<Contactpage />} />
-          <Route path="/aboutus" element={<Aboutus />} /> */}
+          <Route path="/aboutus" element={<Aboutus />} />
         </Routes>
         <Footer />
       </Router>
