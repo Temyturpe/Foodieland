@@ -2,12 +2,12 @@ import Topbar from "./components/Topbar/Topbar";
 import Footer from "./components/Footer/Footer";
 import Home from "./pages/Home";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-// import Recipes from "./pages/Recipes";
+import Recipes from "./pages/Recipes";
 import Homerecipes from "./pages/Homerecipes";
-// import Blogs from "./pages/Blogs";
-// import Aboutus from "./pages/Aboutus";
-// import Contactpage from "./pages/Contactpage";
-// import BlogDetails from "./pages/BlogDetails";
+import Blogs from "./pages/Blogs";
+import Aboutus from "./pages/Aboutus";
+import Contactpage from "./pages/Contactpage";
+import BlogDetails from "./pages/BlogDetails";
 import { Blog, Tryrecipes, Homerecipedata } from "./data";
 
 function App() {
@@ -17,21 +17,21 @@ function App() {
         <Topbar />
         <Routes>
           <Route path="/" element={<Home />} />
-          {/* <Route
+          <Route
             path="/recipes/:recipename"
             element={<Recipes data={Tryrecipes} />}
-          /> */}
+          />
           <Route
             path="/homerecipes/:recipename"
             element={<Homerecipes home={Homerecipedata} />}
           />
-          {/* <Route path="/blogs" element={<Blogs blog={Blog} />} />
+          <Route path="/blogs" element={<Blogs blog={Blog} />} />
           <Route
             path="/blogdetails/:blogtite"
             element={<BlogDetails blog={Blog} />}
           />
           <Route path="/contactpage" element={<Contactpage />} />
-          <Route path="/aboutus" element={<Aboutus />} /> */}
+          <Route path="/aboutus" element={<Aboutus />} />
         </Routes>
         <Footer />
       </Router>
