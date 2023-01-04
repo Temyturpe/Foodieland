@@ -4,11 +4,11 @@ import Home from "./pages/Home";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Recipes from "./pages/Recipes";
 import Homerecipes from "./pages/Homerecipes";
-// import Blogs from "./pages/Blogs";
-// import Aboutus from "./pages/Aboutus";
-// import Contactpage from "./pages/Contactpage";
-// import BlogDetails from "./pages/BlogDetails";
-import { Homerecipedata, Tryrecipes } from "./data";
+import Blogs from "./pages/Blogs";
+import Aboutus from "./pages/Aboutus";
+import Contactpage from "./pages/Contactpage";
+import BlogDetails from "./pages/BlogDetails";
+import { Blog, Tryrecipes, Homerecipedata } from "./data";
 
 function App() {
   return (
@@ -25,13 +25,13 @@ function App() {
             path="/homerecipes/:recipename"
             element={<Homerecipes home={Homerecipedata} />}
           />
-          {/* <Route path="/blogs" element={<Blogs blog={Blog} />} />
+          <Route path="/blogs" element={<Blogs blog={Blog} />} />
           <Route
             path="/blogdetails/:blogtite"
             element={<BlogDetails blog={Blog} />}
           />
           <Route path="/contactpage" element={<Contactpage />} />
-          <Route path="/aboutus" element={<Aboutus />} /> */}
+          <Route path="/aboutus" element={<Aboutus />} />
         </Routes>
         <Footer />
       </Router>
